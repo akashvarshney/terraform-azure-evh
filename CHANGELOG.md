@@ -1,5 +1,87 @@
 # Changelog
 
+## [3.0.0](https://github.com/CloudNationHQ/terraform-azure-evh/compare/v2.4.0...v3.0.0) (2025-05-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* The data structure changed, causing a recreate on existing resources.
+
+### Features
+
+* small refactor ([#65](https://github.com/CloudNationHQ/terraform-azure-evh/issues/65)) ([5eea02c](https://github.com/CloudNationHQ/terraform-azure-evh/commit/5eea02c39068261b2adfc4e31dcacfd16069bbe6))
+
+### Upgrade from v2.4.0 to v3.0.0:
+
+- Update module reference to: `version = "~> 3.0"`
+- The property and variable resource_group is renamed to resource_group_name
+
+## [2.4.0](https://github.com/CloudNationHQ/terraform-azure-evh/compare/v2.3.0...v2.4.0) (2025-05-08)
+
+
+### Features
+
+* add missing properties ([#60](https://github.com/CloudNationHQ/terraform-azure-evh/issues/60)) ([df0330f](https://github.com/CloudNationHQ/terraform-azure-evh/commit/df0330f95e0c0a2a5b86f5788f71224fc9b12486))
+* **deps:** bump github.com/gruntwork-io/terratest in /tests ([#57](https://github.com/CloudNationHQ/terraform-azure-evh/issues/57)) ([b721759](https://github.com/CloudNationHQ/terraform-azure-evh/commit/b721759bde80bb7f284644e8ededdd1c9926bbd0))
+* **deps:** bump golang.org/x/crypto from 0.31.0 to 0.35.0 in /tests ([#59](https://github.com/CloudNationHQ/terraform-azure-evh/issues/59)) ([f7f719a](https://github.com/CloudNationHQ/terraform-azure-evh/commit/f7f719ab198fa48de42c0f90c1e8f7baab3c4cd7))
+* **deps:** bump golang.org/x/net from 0.33.0 to 0.38.0 in /tests ([#61](https://github.com/CloudNationHQ/terraform-azure-evh/issues/61)) ([a1bb84a](https://github.com/CloudNationHQ/terraform-azure-evh/commit/a1bb84a22a34fc1b758795c959d6b6dc6d6e74b1))
+
+## [2.3.0](https://github.com/CloudNationHQ/terraform-azure-evh/compare/v2.2.0...v2.3.0) (2025-01-20)
+
+
+### Features
+
+* **deps:** bump github.com/gruntwork-io/terratest in /tests ([#51](https://github.com/CloudNationHQ/terraform-azure-evh/issues/51)) ([8e882c6](https://github.com/CloudNationHQ/terraform-azure-evh/commit/8e882c692e5197ae9244d2267ce2468dba346f38))
+* **deps:** bump golang.org/x/crypto from 0.29.0 to 0.31.0 in /tests ([#54](https://github.com/CloudNationHQ/terraform-azure-evh/issues/54)) ([701c7be](https://github.com/CloudNationHQ/terraform-azure-evh/commit/701c7bed205cd8e218eb1fd2fad6a3d7737cc0e2))
+* **deps:** bump golang.org/x/net from 0.31.0 to 0.33.0 in /tests ([#55](https://github.com/CloudNationHQ/terraform-azure-evh/issues/55)) ([7acbbbf](https://github.com/CloudNationHQ/terraform-azure-evh/commit/7acbbbf66065541b69d2f696793b5ea5a249e9a0))
+* remove temporary files when deployment tests fails ([#52](https://github.com/CloudNationHQ/terraform-azure-evh/issues/52)) ([fa53193](https://github.com/CloudNationHQ/terraform-azure-evh/commit/fa5319371e9278b7c98ba31dbe28dec8fd10b1e0))
+
+## [2.2.0](https://github.com/CloudNationHQ/terraform-azure-evh/compare/v2.1.0...v2.2.0) (2024-11-11)
+
+
+### Features
+
+* enhance testing with sequential, parallel modes and flags for exceptions and skip-destroy ([#48](https://github.com/CloudNationHQ/terraform-azure-evh/issues/48)) ([2f4e24c](https://github.com/CloudNationHQ/terraform-azure-evh/commit/2f4e24c7e8754ceb14285f0805ebd7833199fda4))
+
+## [2.1.0](https://github.com/CloudNationHQ/terraform-azure-evh/compare/v2.0.0...v2.1.0) (2024-10-11)
+
+
+### Features
+
+* auto generated docs and refine makefile ([#46](https://github.com/CloudNationHQ/terraform-azure-evh/issues/46)) ([935b425](https://github.com/CloudNationHQ/terraform-azure-evh/commit/935b425dcbd7349ea8c056bb36a8d829ae4c4766))
+* **deps:** bump github.com/gruntwork-io/terratest in /tests ([#45](https://github.com/CloudNationHQ/terraform-azure-evh/issues/45)) ([ac71105](https://github.com/CloudNationHQ/terraform-azure-evh/commit/ac7110554130c8c968a0dc7f531aa1f478bc1232))
+
+## [2.0.0](https://github.com/CloudNationHQ/terraform-azure-evh/compare/v1.2.0...v2.0.0) (2024-09-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* Version 4 of the azurerm provider includes breaking changes.
+
+### Features
+
+* upgrade azurerm provider to v4 ([#43](https://github.com/CloudNationHQ/terraform-azure-evh/issues/43)) ([baafa02](https://github.com/CloudNationHQ/terraform-azure-evh/commit/baafa0215d0fffed9257682bbb1563321acd1f3c))
+
+### Upgrade from v1.2.0 to v2.0.0:
+
+- Update module reference to: `version = "~> 2.0"`
+- Changed properties in namespace object:
+  - namespace.zone_redundant -> deprecated
+
+## [1.2.0](https://github.com/CloudNationHQ/terraform-azure-evh/compare/v1.1.1...v1.2.0) (2024-09-04)
+
+
+### Features
+
+* **deps:** bump github.com/gruntwork-io/terratest in /tests ([#38](https://github.com/CloudNationHQ/terraform-azure-evh/issues/38)) ([e89daaf](https://github.com/CloudNationHQ/terraform-azure-evh/commit/e89daaff00706707e5b93fca788f0386771a1dbd))
+
+## [1.1.1](https://github.com/CloudNationHQ/terraform-azure-evh/compare/v1.1.0...v1.1.1) (2024-09-04)
+
+
+### Bug Fixes
+
+* added zone_redundant  property for event hub namespace ([#40](https://github.com/CloudNationHQ/terraform-azure-evh/issues/40)) ([7f57ca9](https://github.com/CloudNationHQ/terraform-azure-evh/commit/7f57ca956e6517cfe211f8af1cf4149d38a1858b))
+
 ## [1.1.0](https://github.com/CloudNationHQ/terraform-azure-evh/compare/v1.0.0...v1.1.0) (2024-09-02)
 
 

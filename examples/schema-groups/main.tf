@@ -1,17 +1,17 @@
 module "naming" {
   source  = "cloudnationhq/naming/azure"
-  version = "~> 0.1"
+  version = "~> 0.24"
 
-  suffix = ["demo", "prd"]
+  suffix = ["demo", "dev"]
 }
 
 module "rg" {
   source  = "cloudnationhq/rg/azure"
-  version = "~> 1.0"
+  version = "~> 2.0"
 
   groups = {
     demo = {
-      name     = module.naming.resource_group.name
+      name     = module.naming.resource_group.name_unique
       location = "westeurope"
     }
   }
@@ -19,12 +19,12 @@ module "rg" {
 
 module "eventhub" {
   source  = "cloudnationhq/evh/azure"
-  version = "~> 1.0"
+  version = "~> 3.0"
 
   namespace = {
-    name           = module.naming.eventhub_namespace.name
-    location       = module.rg.groups.demo.location
-    resource_group = module.rg.groups.demo.name
+    name                = module.naming.eventhub_namespace.name_unique
+    location            = module.rg.groups.demo.location
+    resource_group_name = module.rg.groups.demo.name
 
     schema_groups = {
       trafficsensor = {
